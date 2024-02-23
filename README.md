@@ -23,9 +23,8 @@ more loot boxes. The loot table will be pre-determined, with randomness to stats
 	Name, GoldTotal, Inventory, TradeStatus
 
 ## WEAPON:
-	focus on type and rarity
-    str, magic, crit, hpboost
-    rarity, type, one/two hand, main/off hand
+	weapon type : [rarity, max_value]
+	
 
 ## LOOT BOXES:
 	player will purchace the right to choose a box. Three boxes will be presented, loot pre-determined. Player chooses box and recieves loot. Player is 	shown what loot is missed out on. Loot goes to inventory, player save.
