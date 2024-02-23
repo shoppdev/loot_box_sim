@@ -4,6 +4,10 @@
 ## Change Log:
 	Added save/load
 	Can create basic character
+	weapon skeleton done
+	inventory saves/loads
+	can add dict of items to player inventory
+
 ## Ideas:
 
 Loot Box simulator
@@ -19,11 +23,18 @@ more loot boxes. The loot table will be pre-determined, with randomness to stats
 ## SAVE SYSTEM
 	save, load player data
 
+## INVENTORY SYSTEM:
+	display
+	order
+	delete
+	trade
+
 ## PLAYER:
 	Name, GoldTotal, Inventory, TradeStatus
 
 ## WEAPON:
-	weapon type : [rarity, max_value]
+	weapon name : [type, rarity, max_value]
+	symbols to identify 
 	
 
 ## LOOT BOXES:
