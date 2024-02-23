@@ -1,6 +1,9 @@
 # loot_box_sim
 
-
+# TODO
+    -implement player and player save
+    -implement player load
+    
 ## Ideas:
 
 Loot Box simulator
