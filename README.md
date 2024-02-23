@@ -1,15 +1,9 @@
 # loot_box_sim
 
-# TODO
-	
-    -implement player and player save
-		~~-check for player~~
-		~~-add new player~~
 
-    -implement player load
-
-    -implement weapon class
-
+## Change Log:
+	Added save/load
+	Can create basic character
 ## Ideas:
 
 Loot Box simulator
