@@ -16,10 +16,14 @@ Loot Box simulator
 	Players open one loot box of three. They can collect, sell, or trade the items for gold or other items. Players use gold to purchace
 more loot boxes. The loot table will be pre-determined, with randomness to stats and rarity.
 
+## SAVE SYSTEM
+	save, load player data
+
 ## PLAYER:
 	Name, GoldTotal, Inventory, TradeStatus
 
 ## WEAPON:
+	focus on type and rarity
     str, magic, crit, hpboost
     rarity, type, one/two hand, main/off hand
 
@@ -38,8 +42,8 @@ more loot boxes. The loot table will be pre-determined, with randomness to stats
 
 ### EXTENDED GOAL:
 	Chat
-	Player Equip gear
-	Player stats
-	player class
-	players fight a boss (like a mobile raid where you fight till you lose, but boss stays at current health)
+	~~Player Equip gear~~
+	~~Player stats~~
+	~~player class~~
+	~~players fight a boss (like a mobile raid where you fight till you lose, but boss stays at current health)~~
     Delete old player profiles
