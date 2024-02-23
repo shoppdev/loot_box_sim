@@ -1,7 +1,9 @@
-
+# IMPORTS
+import pickle
+import os
 
 # VARS
-
+player = None
 
 
 # CLASSES
@@ -10,66 +12,45 @@ class Player:
     def __init__(self, name):
         self.name = name
         self.gold_total = 1000  # just a guess, will update for balance
-        self.invantory = []
+        # self.invantory = ['basic sword', 'hat']
         self.trade_status = False
 
     def __repr__(self):
-        pass
+        print(self.name, self.gold_total, self.trade_status)
 
 
-# check if player exists, if not make a new one -- working
+
+
+# this gets player name input and checks to see if save exists
 def check_for_player():
-    new_player_list = []
-    check_name = input("Who might you be? ")
-    with open('files/player_list.txt') as player_list:
-        known_players = player_list.readlines()
-        new_player_list = file_stipper(known_players)
-        
-        if check_name in new_player_list:
-            player_load(check_name)
-        else:
-            make_new_player_save(check_name)
+    player_name = input("What is your player name? (Use same name to continue game) ")
+    file_path = 'files/bin/' + player_name
 
-# Strip off \n and return a list  -- working
-def file_stipper(file):
-    new_list = []
-    for line in file:
-        new_list.append(line.strip())
+    # check for file
+    if os.path.isfile(file_path):
+        return player_load(player_name, file_path)
+    else:
+        return player_create(player_name, file_path)
 
-    return new_list
+# loads in the player object. should contain all info needed to play. ie inventory and trade status
+def player_load(player_name, path):
+    print('Loading your save')
+    with open(path, 'rb') as player_save:
+        player = pickle.load(player_save)
+    return player
 
-# Make a new instance of player
-def make_new_player_save(name):
-    # p_name = Player(name)
-    f_path = 'files/saves/' + name
-    name_to_add = name + '\n'
+def player_create(player_name, path):
+    print("Creating new player. Prepare for the fun")
+    player = Player(player_name)
+    player_save(player, path, player)
+    return player
 
-    # add player name to player_list.txt
-    with open('files/player_list.txt', 'a') as add_player:
-        add_player.write(name_to_add)
-
-    # make new save here    
-    with open(f_path, 'w') as new_player:
-        print('file created need to build file structure')
-        new_player.write(name + "'s file existis")
-        # we will create the file structure here soon
-
-# load the player file
-def player_load(player):
-    print("We will load player here")
-    f = 'files/saves/' + player
-    with open(f, 'r') as curr_player:
-        print(curr_player.readlines())
-        print("Load Complete")
-
-# save the player file
-def player_save(player):
-    print("We save the player here")
-    pass
-
-
-
+# need to build new path nothing returned
+def player_save(player_name, path, player):
+    with open(path, 'wb') as file:
+        pickle.dump(player, file)
 
 
 ## MAIN LOOP ##
-check_for_player()
+player = check_for_player()
+print(player.name, player.gold_total)

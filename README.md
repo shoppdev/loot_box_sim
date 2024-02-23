@@ -1,9 +1,15 @@
 # loot_box_sim
 
 # TODO
+	
     -implement player and player save
+		~~-check for player~~
+		~~-add new player~~
+
     -implement player load
-    
+
+    -implement weapon class
+
 ## Ideas:
 
 Loot Box simulator
@@ -18,6 +24,10 @@ more loot boxes. The loot table will be pre-determined, with randomness to stats
 
 ## PLAYER:
 	Name, GoldTotal, Inventory, TradeStatus
+
+## WEAPON:
+    str, magic, crit, hpboost
+    rarity, type, one/two hand, main/off hand
 
 ## LOOT BOXES:
 	player will purchace the right to choose a box. Three boxes will be presented, loot pre-determined. Player chooses box and recieves loot. Player is 	shown what loot is missed out on. Loot goes to inventory, player save.
@@ -38,3 +48,4 @@ more loot boxes. The loot table will be pre-determined, with randomness to stats
 	Player stats
 	player class
 	players fight a boss (like a mobile raid where you fight till you lose, but boss stays at current health)
+    Delete old player profiles
