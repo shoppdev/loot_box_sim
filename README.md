@@ -34,7 +34,6 @@ more loot boxes. The loot table will be pre-determined, with randomness to stats
 
 ## WEAPON:
 	weapon name : [type, rarity, max_value]
-	symbols to identify 
 	
 
 ## LOOT BOXES:
