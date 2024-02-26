@@ -52,7 +52,8 @@ trash_items = [
     "Tarnished Pauldrons",
     "Cracked Leather Helmet",
     "Rusty Chainmail Leggings",
-    "Threadbare Boots"
+    "Threadbare Boots",
+    "Sock (Used)"
 ]
 
 common_items = [

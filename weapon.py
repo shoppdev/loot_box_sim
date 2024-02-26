@@ -13,7 +13,7 @@ class Weapon:
         self.qty  = 1
 
     def __repr__(self):
-        print(self.name)
+        return self.name
 
     def build_weapon(self):
         # first pick rarity -- this gives us o to 1, we turn into percentage.
@@ -34,7 +34,7 @@ class Weapon:
         elif prcnt > 0.25 and prcnt <= 0.50:    # .25%
             # print('Cosmical')
             self.rarity = 'Cosmical'
-            self.name - random.choice(loi.cosmical_items)
+            self.name = random.choice(loi.cosmical_items)
             self.value = random.randint(0, 1000) + base_values[10]
         elif prcnt > 0.50 and prcnt <= 1.25:    # .75%%
             # print('Devine')
