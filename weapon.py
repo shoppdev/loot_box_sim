@@ -1,7 +1,8 @@
 # weapon class for making weapons
 import random
+import listsofitems as loi
 
-rarities = ('trash', 'common', 'uncommon', 'rare', 'epic' 'legendary', 'Void Touched', 
+rarities = ('trash', 'common', 'uncommon', 'rare', 'epic' 'Legendary', 'Void Touched', 
            'Blessed','Demonic', 'Divine', 'Cosmical', 'Multiversal')
 
 class Weapon:
@@ -46,8 +47,8 @@ class Weapon:
             # print('Void Touched')
             self.rarity = 'Void Touched'
         elif prcnt > 10 and prcnt <= 20:          # 10%
-            # print('Legondary')
-            self.rarity = 'Legondary' 
+            # print('Legendary')
+            self.rarity = 'Legendary' 
         elif prcnt > 20  and prcnt <= 35:          # 15%
             # print('Epic')
             self.rarity = 'Epic' 
@@ -82,7 +83,7 @@ class Weapon:
     def value_weapon(self):
         pass
 
-
-for i in range(100):
-    w = Weapon()
-    w.build_weapon()
+print(random.choice(loi.weapons))
+# for i in range(10000):
+#     w = Weapon()
+#     w.build_weapon()
