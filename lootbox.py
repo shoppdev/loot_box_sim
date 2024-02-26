@@ -1,12 +1,18 @@
 
-# what is a loot box: a container for items.
-# {
-#     'Sock (used)': ['Sock', 'Trash', 1, 1],
-#     'Sock (used)': ['Sock', 'Trash', 1, 1],
-#     'Sock (used)': ['Sock', 'Trash', 1, 1]
-# } this is a wep dict
+from weapon import Weapon
+import random
 
 class LootBox:
-    
-    
-    pass
+
+    def __init__(self):
+        self.name = "LootBox"
+        self.loot_list = []
+
+    def populate_loot(self):
+        how_many = random.randint(3,4)
+        for i in range(0, how_many):
+           w = Weapon()
+           w.build_weapon()
+           self.loot_list.append(w)
+
+

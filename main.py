@@ -4,7 +4,6 @@ import os
 import random
 from player import Player
 from lootbox import LootBox
-from weapon import Weapon
 
 # VARS
 player = None
@@ -52,28 +51,27 @@ def get_path():
 # Starts the game asking for player
 player = check_for_player()
 
-# give the plahyer some weapons
-temp_wep_list = []
-for i in range(4):
-    w = Weapon()
-    w.build_weapon()
-    temp_wep_list.append(w)
+# make a loot box and see what is inside
+loot1 = LootBox()
+loot1.populate_loot()
+loot2 = LootBox()
+loot2.populate_loot()
+loot3 = LootBox()
+loot3.populate_loot()
 
-print('############')
-for obj in temp_wep_list:
-    print(obj.name + " " + obj.rarity)
-
-player.add_to_inventory(temp_wep_list)
-# w = Weapon()
-# w.build_weapon()
-# print(w.name)
-
-
-# player.add_to_inventory({"Basic Sword": ['Short Sword', "Common", 10, 1], "Old Hat": ['Hat', 'Trash', 1, 1]})
-
-
-# player.add_to_inventory({'Sock (used)': ['Sock', 'Trash', 1, 1]})
-
+print('What box you want 1, 2, 3')
+choice = input('? ')
+if int(choice) == 1:
+    print('\nBox 1')
+    print('Congrats! Here is your loot!!\n')
+    for item in loot1.loot_list:
+        print(item.name)
+        print(item.rarity)
+        print(item.value)
+        print("\n")
+else:
+    print('did you choose 1?')
+player.add_to_inventory(loot1.loot_list)
 print(player.access_inventory())
 
 

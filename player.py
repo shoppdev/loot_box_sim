@@ -29,14 +29,7 @@ class Player:
         choice = input("\nWhat would you like to do with your inventory?")
 
 
-    #REWRITE FOR TAKING IN AN OBJECT NOT A DICT
+   # pass in the weapon object list
     def add_to_inventory(self, won_inventory):
-        # pass in a dict of all the objects recieved if object in inventory increases qty
-        # for key, value in won_inventory.items():
-        #     if key in self.inventory.keys():
-        #         self.inventory[key][-1] += 1
-        #     else:
-        #         self.inventory[key] = value
-
         for obj in won_inventory:
             self.inventory[obj] = [obj.rarity, obj.value, obj.qty]
