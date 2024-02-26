@@ -1,14 +1,14 @@
 # loot_box_sim
 
 
-## Change Log:
-	Added save/load
-	Can create basic character
-	weapon skeleton done
-	inventory saves/loads
-	can add dict of items to player inventory
+## TODO
+	Build a game loop
+	Implement Selling
+	Implement Trading
 
-## Ideas:
+
+
+## Idea:
 
 Loot Box simulator
 	display ~3 boxes and user chooses one, show user their loot(put in an inventory?), show user what they missed out on
@@ -30,7 +30,7 @@ more loot boxes. The loot table will be pre-determined, with randomness to stats
 	trade
 
 ## PLAYER:
-	Name, GoldTotal, Inventory, TradeStatus
+	Name, GoldTotal, Inventory, TradeStatus, level (increese chance to not get trash?)
 
 ## WEAPON:
 	weapon name : [type, rarity, max_value]
