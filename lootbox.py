@@ -7,4 +7,6 @@
 # } this is a wep dict
 
 class LootBox:
+    
+    
     pass
