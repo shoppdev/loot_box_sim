@@ -2,8 +2,6 @@
 import random
 import listsofitems as loi
 
-rarities = ('trash', 'common', 'uncommon', 'rare', 'epic' 'Legendary', 'Void Touched', 
-           'Blessed','Demonic', 'Divine', 'Cosmical', 'Multiversal')
 
 class Weapon:
     
@@ -83,7 +81,7 @@ class Weapon:
     def value_weapon(self):
         pass
 
-print(random.choice(loi.weapons))
+print(random.choice(loi.trash_items))
 # for i in range(10000):
 #     w = Weapon()
 #     w.build_weapon()
