@@ -3,8 +3,8 @@
 
 ## TODO
 	Build a game loop
-		purchace loot boxes
-		sell/trade items
+		~~purchace loot boxes~~
+		sell items
 
 	Implement Selling
 	Implement Trading
@@ -56,9 +56,6 @@ more loot boxes. The loot table will be pre-determined, with randomness to stats
 
 
 ### EXTENDED GOAL:
+	trade
 	Chat
-	~~Player Equip gear~~
-	~~Player stats~~
-	~~player class~~
-	~~players fight a boss (like a mobile raid where you fight till you lose, but boss stays at current health)~~
     Delete old player profiles
