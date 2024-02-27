@@ -8,7 +8,7 @@ from lootbox import LootBox
 # VARS
 player = None
 path_start = 'files/bin/'
-box_cost = 10   # this is the cost of a lootbox
+box_cost = 100   # this is the cost of a lootbox
 
         
 # ////// FUNCTIONS ///////
@@ -93,6 +93,7 @@ def loot_box_time():
     l3 = make_lootbox()
     box_list = [l1, l2, l3]
     while choice != 0:
+        print(f'You have {player.gold_total}G. Boxes cost {box_cost} each!')
         print('Please choose a loot box: 0 to exit')
         print('''
          _____     _____     _____
@@ -102,11 +103,17 @@ def loot_box_time():
          -----     -----     -----                  
     ''')
         choice = int(input("? "))
-        if choice < 1 or choice > 3:
+        if choice == 0:
+            pass
+        elif choice < 1 or choice > 3:
             print('Please choose a valid box')
         else:
             player.gold_total -= box_cost
             show_loot(choice, box_list)
+
+# player sells items to make some G to buy more loot boxes
+def sell_items():
+    pass
 
 ## MAIN LOOP ##
 # Starts the game asking for player
@@ -124,6 +131,7 @@ while choice != 0:
     2. Buy Loot Box
     3. Sell
     4. Trade
+    5. Destroy Item
     0. exit
           ''')
     choice = int(input("? "))
@@ -135,33 +143,10 @@ while choice != 0:
         print("sell here (shop closed)")
     elif choice == 4:
         print("Trading comming soon")
+    elif choice == 5:
+        print('Here you can trash an item if you want... I guess?')
     else:
         print('Please choose another choice. Ya know, from the list?')
-
-# # make a loot box and see what is inside
-# loot1 = LootBox()
-# loot1.populate_loot()
-# loot2 = LootBox()
-# loot2.populate_loot()
-# loot3 = LootBox()
-# loot3.populate_loot()
-
-# print('What box you want 1, 2, 3')
-# choice = input('? ')
-# if int(choice) == 1:
-#     print('\nBox 1')
-#     print('Congrats! Here is your loot!!\n')
-#     for item in loot1.loot_list:
-#         print(item.name)
-#         print(item.rarity)
-#         print(item.value)
-#         print("\n")
-# else:
-#     print('did you choose 1?')
-# player.add_to_inventory(loot1.loot_list)
-# print(player.access_inventory())
-
-
 
 #saves changes to player
 player_save(get_path(), player)
