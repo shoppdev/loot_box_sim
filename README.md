@@ -3,8 +3,14 @@
 
 ## TODO
 	Build a game loop
+		purchace loot boxes
+		sell/trade items
+
 	Implement Selling
 	Implement Trading
+	Update weapon values(balance)
+
+	fix name save/file to be all lowercase.
 
 
 
