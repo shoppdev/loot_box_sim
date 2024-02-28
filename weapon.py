@@ -16,9 +16,6 @@ class Weapon:
         return self.name
 
     def build_weapon(self):
-        # first pick rarity -- this gives us o to 1, we turn into percentage.
-        # rand_dec = round(random.uniform(-1, 1.0), 6)
-        # prcnt = rand_dec * 100
         prcnt = -2
 
         # grab a random number and make sure its not negative
@@ -89,15 +86,6 @@ class Weapon:
         else:
             # Just checking if anythin fell through the cracks
             print('##########################')
-            print('Fell out of designed plans')
+            print('Fell out of designed plans THIS IS BAD!!')
             print(prcnt)
             print('##########################')
-
-# print(random.choice(loi.trash_items))
-# for i in range(10):
-#     w = Weapon()
-#     w.build_weapon()
-#     print(w.name)
-#     print(w.rarity)
-#     print(w.value)
-#     print(w.qty)

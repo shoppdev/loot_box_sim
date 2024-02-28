@@ -25,8 +25,6 @@ class Player:
 
         print("\n")
         print("1: Sell")
-        print("2: Trade")
-        print("3: Destroy")
         print("0: Exit")
         choice = int(input("\nWhat would you like to do with your inventory?"))
         if choice == 1:
@@ -39,7 +37,6 @@ class Player:
 
         dict_key = self.key_list[key_number]
         key_string = dict_key.name #string
-        key_value = dict_key.value  #int
         
         for key, value in self.inventory.items():
             if key_string == key.name:
@@ -49,12 +46,7 @@ class Player:
                 jumk = self.key_list.pop(key_number)
                 # save the player file
                 save.player_save(self)
-                break
-            else:
-                # print(key)
-                # print("Hmm, This item wasn't found. Try picking a number from above.")
-                pass
-        
+                break        
 
    # pass in the weapon object list
     def add_to_inventory(self, won_inventory):
@@ -64,5 +56,3 @@ class Player:
                 pass
             else:
                 self.key_list.append(obj)
-
-

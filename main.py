@@ -1,7 +1,6 @@
 # IMPORTS
 import pickle
 import os
-import random
 from player import Player
 from lootbox import LootBox
 
@@ -111,16 +110,11 @@ def loot_box_time():
             player.gold_total -= box_cost
             show_loot(choice, box_list)
 
-# player sells items to make some G to buy more loot boxes
-def sell_items():
-    pass
-
 ## MAIN LOOP ##
 # Starts the game asking for player
 player = check_for_player()
 
 print(f'\nWelcome {player.name} to Loot Box Simulator!')
-
 
 choice = 49
 while choice != 0:
@@ -129,9 +123,6 @@ while choice != 0:
     print('''
     1. See inventory
     2. Buy Loot Box
-    3. Sell
-    4. Trade
-    5. Destroy Item
     0. exit
           ''')
     choice = int(input("? "))
