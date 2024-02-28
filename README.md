@@ -2,16 +2,13 @@
 
 
 ## TODO
-	Build a game loop
-		~~purchace loot boxes~~
-		~~sell items~~
+	 - fix name save/file to be all lowercase.
+	 - balance values and costs
 
-	~~Implement Selling~~
-	Update weapon values(balance)
+## About
+	Player buys and opens loot boxes. Players can sell or collect in inventory. 
 
-	fix name save/file to be all lowercase.
-
-
+	
 
 ## Idea:
 
