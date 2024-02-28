@@ -4,10 +4,9 @@
 ## TODO
 	Build a game loop
 		~~purchace loot boxes~~
-		sell items
+		~~sell items~~
 
-	Implement Selling
-	Implement Trading
+	~~Implement Selling~~
 	Update weapon values(balance)
 
 	fix name save/file to be all lowercase.
