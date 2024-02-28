@@ -1,5 +1,6 @@
 # Welcome to the Player class
 import pickle
+import save
     
 class Player:
 
@@ -47,7 +48,7 @@ class Player:
                 junk = self.inventory.pop(key)
                 jumk = self.key_list.pop(key_number)
                 # save the player file
-
+                save.player_save(self)
                 break
             else:
                 # print(key)
@@ -65,7 +66,3 @@ class Player:
                 self.key_list.append(obj)
 
 
-
-# saves player file, nothing returned
-def player_save(path, player):
-    
