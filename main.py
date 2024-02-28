@@ -130,14 +130,10 @@ while choice != 0:
         player.access_inventory()
     elif choice == 2:
         loot_box_time()
-    elif choice == 3:
-        print("sell here (shop closed)")
-    elif choice == 4:
-        print("Trading comming soon")
-    elif choice == 5:
-        print('Here you can trash an item if you want... I guess?')
+    elif choice == 0:
+        break
     else:
-        print('Please choose another choice. Ya know, from the list?')
+        print('Please choose another choice. Ya know, from the list?\n')
 
 #saves changes to player
 player_save(get_path(), player)
