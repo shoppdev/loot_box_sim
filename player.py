@@ -1,4 +1,5 @@
 # Welcome to the Player class
+import pickle
     
 class Player:
 
@@ -30,38 +31,41 @@ class Player:
         if choice == 1:
             self.sell_inventory()
 
-    # this is not working. need to get it to delete dict entries
     def sell_inventory(self):
+
         sell_choice = int(input("What # do you want to sell? "))
-        key_number = sell_choice - 1
+        key_number = int(sell_choice) - 1
 
         dict_key = self.key_list[key_number]
-        key_string = dict_key.name
-        key_value = dict_key.value
-
+        key_string = dict_key.name #string
+        key_value = dict_key.value  #int
         
-        if key_string in self.inventory.keys():
-            print('found item you want to sell')
-        else:
-            print(f'cant find {key_string}')
-            for item in self.inventory.keys:
-                print(item)
+        for key, value in self.inventory.items():
+            if key_string == key.name:
+                print(f'Selling {key.name} for {key.value}G!!')
+                self.gold_total += key.value    # adds value to gold pool
+                junk = self.inventory.pop(key)
+                jumk = self.key_list.pop(key_number)
+                # save the player file
 
-        # print(type(sell_choice))
-        # print(type(key_number))
-        # print(type(dict_key))
-        # print(dict_key)
-
+                break
+            else:
+                # print(key)
+                # print("Hmm, This item wasn't found. Try picking a number from above.")
+                pass
+        
 
    # pass in the weapon object list
     def add_to_inventory(self, won_inventory):
-        # print('in add_to_inventory')
         for obj in won_inventory:
             self.inventory[obj] = [obj.rarity, obj.value, obj.qty]
             if obj in self.key_list:
-                # print('in here')
                 pass
             else:
-                # print('not in here')
                 self.key_list.append(obj)
-                # print(type(obj.name))
+
+
+
+# saves player file, nothing returned
+def player_save(path, player):
+    
